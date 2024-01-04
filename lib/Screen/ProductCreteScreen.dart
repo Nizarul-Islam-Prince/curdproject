@@ -1,3 +1,4 @@
+import 'package:curd_project/Style/style.dart';
 import 'package:flutter/material.dart';
 
 class ProductCreateScreen extends StatefulWidget {
@@ -18,11 +19,31 @@ class _ProductCreateScreen extends State<ProductCreateScreen> {
             child: (SingleChildScrollView(
               padding: EdgeInsets.all(20),
               child: Column(children: [
-                TextFormField(onChanged: (value) {}),
-                TextFormField(onChanged: (value) {}),
-                TextFormField(onChanged: (value) {}),
-                TextFormField(onChanged: (value) {}),
-                TextFormField(onChanged: (value) {})
+                SizedBox(height: 20),
+                TextFormField(
+                  onChanged: (value) {},
+                  decoration: AppInputDecoration('Product Name'),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  onChanged: (value) {},
+                  decoration: AppInputDecoration('Product Code'),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  onChanged: (value) {},
+                  decoration: AppInputDecoration('Product Image'),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  onChanged: (value) {},
+                  decoration: AppInputDecoration('Unit Price'),
+                ),
+                SizedBox(height: 20),
+                TextFormField(
+                  onChanged: (value) {},
+                  decoration: AppInputDecoration('Total Price'),
+                )
               ]),
             )),
           )
