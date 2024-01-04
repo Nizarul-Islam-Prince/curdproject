@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 const ColorRed = Color.fromRGBO(231, 28, 36, 1);
 const ColorGreen = Color.fromRGBO(33, 191, 115, 1);
 const ColorWhite = Color.fromRGBO(255, 255, 255, 1);
 const ColorDarkBlue = Color.fromRGBO(44, 62, 80, 1);
+
+ScreenBackground(context) {
+  return SvgPicture.asset(
+    'assets/images/background.svg',
+    alignment: Alignment.center,
+    width: MediaQuery.of(context).size.width,
+    height: MediaQuery.of(context).size.height,
+    fit: BoxFit.cover,
+  );
+}
 
 InputDecoration AppInputDecoration(label) {
   return InputDecoration(

@@ -15,6 +15,8 @@ class _ProductCreateScreen extends State<ProductCreateScreen> {
       ),
       body: Stack(
         children: [
+          //Background Graphics
+          ScreenBackground(context),
           Container(
             child: (SingleChildScrollView(
               padding: EdgeInsets.all(20),
