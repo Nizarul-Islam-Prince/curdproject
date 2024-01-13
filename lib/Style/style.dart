@@ -29,7 +29,7 @@ InputDecoration AppInputDecoration(label) {
       labelText: label);
 }
 
-DecoratedBox AppDropdown(child) {
+DecoratedBox AppDropdownStyle(child) {
   return DecoratedBox(
     decoration: BoxDecoration(
         color: ColorWhite,
