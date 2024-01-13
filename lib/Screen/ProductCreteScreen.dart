@@ -22,6 +22,24 @@ class _ProductCreateScreen extends State<ProductCreateScreen> {
     });
   }
 
+  FormOnSubmit() {
+    if (FormValues['Img']!.length == 0) {
+      ErrorToast("Image Link Required");
+    } else if (FormValues['ProductCode']!.length == 0) {
+      ErrorToast("Product Code Required");
+    } else if (FormValues['ProductName']!.length == 0) {
+      ErrorToast("Product Name Required");
+    } else if (FormValues['Qty']!.length == 0) {
+      ErrorToast("Quenty Required");
+    } else if (FormValues['TotalPrice']!.length == 0) {
+      ErrorToast("Total Price Required");
+    } else if (FormValues['UnitPrice']!.length == 0) {
+      ErrorToast("Unit Price Required");
+    } else {
+      //Data Rest Api POSt
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -108,7 +126,9 @@ class _ProductCreateScreen extends State<ProductCreateScreen> {
                 Container(
                   child: ElevatedButton(
                       style: AppButtonstyle(),
-                      onPressed: () {},
+                      onPressed: () {
+                        FormOnSubmit();
+                      },
                       child: SuccessButtonChild('Submit')),
                 ),
               ]),
